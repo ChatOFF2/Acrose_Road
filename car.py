@@ -17,3 +17,6 @@ class Car(turtle.Turtle):
 
     def move(self):
         self.forward(10)
+
+    def car_reset(self):
+        self.goto(-300, 150)

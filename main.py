@@ -1,16 +1,18 @@
 import turtle
 import time
-
+import scoreboard
 import car
-from car import Car
 import random
+import peshehod
+
 turtle.tracer(0)
 nycar=car.Car(-300, 150)
 
-import peshehod
+
 
 turtle.listen()
 turtle.onkey(nycar.move, "space")
+scoree=scoreboard.Score()
 
 #player=peshehod.Peshehod(0, -250)
 #player2=peshehod.Peshehod(-200, -259)
@@ -33,11 +35,13 @@ while GameON:
         if all.ycor()>250:
             all.removerit()
             kolich.remove(all)
-
-
-
-
         all.olvaysmove()
+
+    if nycar.xcor()>300:
+        scoree.prirostscheta()
+        nycar.car_reset()
+
+
 
 
 
