@@ -30,6 +30,7 @@ while GameON:
     for all in kolich:
         if nycar.distance(all)<20:
             print("GAME OVER")
+            nycar.reset()
 
     for all in kolich:
         if all.ycor()>250:
@@ -39,6 +40,7 @@ while GameON:
 
     if nycar.xcor()>300:
         scoree.prirostscheta()
+        scoree.savehiscore()
         nycar.car_reset()
 
 
